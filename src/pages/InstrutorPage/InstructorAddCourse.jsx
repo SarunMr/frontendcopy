@@ -1,3 +1,4 @@
+
 import React, { useState, useRef } from "react";
 import {
   BookOpen, Plus, Video, FileText, Trash2, Save, X, UploadCloud, 
@@ -9,7 +10,7 @@ const categories = [
 ];
 const levels = ["beginner", "intermediate", "advanced"];
 
-export default function AddCoursePage() {
+export default function InstructorAddCoursePage() {
   const [activeTab, setActiveTab] = useState("basic");
   const [newCourse, setNewCourse] = useState({
     title: "", description: "", category: "", level: "",

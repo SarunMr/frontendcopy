@@ -10,7 +10,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-const Navbar = () => {
+const InstructorNavbar = () => {
   const [isAdminView, setIsAdminView] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
@@ -112,7 +112,7 @@ const Navbar = () => {
           ) : (
             <>
               <Shield className="h-4 w-4 mr-2" />
-              Switch to Admin
+              Switch to Instructor
             </>
           )}
         </button>
@@ -263,4 +263,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default InstructorNavbar;

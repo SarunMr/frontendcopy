@@ -15,7 +15,7 @@ import {
 
 import justLogo from "../../assets/images/justLogo.png";
 
-const Sidebar = () => {
+const InstructorSidebar = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const location = useLocation();
@@ -24,27 +24,28 @@ const Sidebar = () => {
     {
       icon: <LayoutDashboard className="h-5 w-5" />,
       text: "Dashboard",
-      path: "/admin/dashboard",
+      path: "/instructor/dashboard",
     },
     {
-      icon: <CheckCheck className="h-5 w-5" />,
-      text: "Approvals",
-      path: "/admin/approvals",
+      icon: <FilePlus2 className="h-5 w-5" />,
+      text: "Add Course",
+      path: "/instructor/course",
     },
+ 
     {
       icon: <DollarSign className="h-5 w-5" />,
       text: "Revenue",
-      path: "/admin/revenue",
+      path: "/instructor/revenue",
     },
     {
       icon: <Settings className="h-5 w-5" />,
       text: "Tools",
-      path: "/admin/tools",
+      path: "/instructor/tools",
     },
     {
       icon: <HelpCircle className="h-5 w-5" />,
       text: "Help",
-      path: "/admin/help",
+      path: "/instructor/help",
     },
   ];
 
@@ -152,4 +153,4 @@ const SidebarItem = ({ icon, text, path, isExpanded, isActive, onClick }) => {
   );
 };
 
-export default Sidebar;
+export default InstructorSidebar;
