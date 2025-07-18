@@ -23,6 +23,7 @@ import Course from "./pages/AdminPage/Course.jsx";
 import ApprovalsPage from "./pages/AdminPage/Approvals.jsx";
 import HelpPage from "./pages/AdminPage/Help.jsx";
 import ToolsPage from "./pages/AdminPage/Tools.jsx";
+import Revenue from "./pages/AdminPage/Revenue.jsx";
 
 function AppRoutes() {
   const location = useLocation();
@@ -57,6 +58,7 @@ function AppRoutes() {
           <Route path="course/create" element={<Course />}></Route>
           <Route path="approvals" element={<ApprovalsPage />}></Route>
           <Route path="tools" element={<ToolsPage />}></Route>
+          <Route path="revenue" element={<Revenue />}></Route>
           <Route path="help" element={<HelpPage />}></Route>
         </Route>
         <Route
