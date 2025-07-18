@@ -33,7 +33,7 @@ function AppRoutes() {
     state?.backgroundLocation ||
       (location.pathname === "/login" || location.pathname === "/signup"
         ? { pathname: "/" }
-        : location),
+        : location)
   );
   const backgroundLocation = originalBackgroundLocation.current;
   const isModal =
