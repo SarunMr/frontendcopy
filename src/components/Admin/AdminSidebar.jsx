@@ -27,11 +27,6 @@ const Sidebar = () => {
       path: "/admin/dashboard",
     },
     {
-      icon: <FilePlus2 className="h-5 w-5" />,
-      text: "Add Course",
-      path: "/admin/course",
-    },
-    {
       icon: <CheckCheck className="h-5 w-5" />,
       text: "Approvals",
       path: "/admin/approvals",
