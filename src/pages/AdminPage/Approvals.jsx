@@ -143,9 +143,11 @@ export default function Approvals() {
       {/* Details Modal */}
       {selectedCourse && (
         <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4" onClick={() => setSelectedCourse(null)}>
-          <div className="max-w-4xl w-full bg-white rounded-3xl shadow-2xl max-h-[90vh] overflow-hidden relative"
+          <div className="max-w-4xl w-full bg-white rounded-3xl shadow-2xl max-h-[90vh] overflow-hidden relative flex flex-col"
             onClick={e => e.stopPropagation()}>
-            <div className="p-8 border-b bg-gradient-to-r from-blue-50 to-white">
+            
+            {/* Modal Header */}
+            <div className="p-8 border-b bg-gradient-to-r from-blue-50 to-white flex-shrink-0">
               <button
                 className="absolute top-6 right-6 bg-white rounded-full p-2 hover:bg-gray-100 shadow transition"
                 onClick={() => setSelectedCourse(null)}
@@ -168,7 +170,8 @@ export default function Approvals() {
               </div>
             </div>
             
-            <div className="p-8 overflow-y-auto max-h-[60vh]">
+            {/* Modal Body - Scrollable Content */}
+            <div className="p-8 overflow-y-auto flex-1">
               <div className="mb-6">
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">Description</h4>
                 <p className="text-gray-600 leading-relaxed">{selectedCourse.description}</p>
@@ -258,7 +261,8 @@ export default function Approvals() {
               )}
             </div>
 
-            <div className="p-8 border-t bg-gray-50 flex gap-4">
+            {/* Modal Footer - Fixed at Bottom */}
+            <div className="p-8 border-t bg-gray-50 flex gap-4 flex-shrink-0">
               <button
                 onClick={() => handleApprove(selectedCourse.id)}
                 className="flex-1 bg-green-500 hover:bg-green-600 text-white py-3 rounded-xl shadow font-semibold text-lg transition flex items-center justify-center gap-2"
